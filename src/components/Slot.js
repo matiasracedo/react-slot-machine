@@ -9,19 +9,15 @@ class Slots extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { slot1: "", slot2: "", slot3: "", rolling: false, id: 0 };
+    this.state = { slot1: "", slot2: "", slot3: "", rolling: false, id: -1 };
 
     // get ref of dic on which elements will roll
     this.slotRef = [createRef(), createRef(), createRef()];
   }
   restart = () => {
     this.props.setBalance(99.99)
-    this.props.setRows([{ 
-        id: 0, 
-        slot1: 0, 
-        slot2: 0, 
-        slot3: 0, 
-        date: '' }])
+    this.props.setRows([])
+        this.setState({ slot1: "", slot2: "", slot3: "", rolling: false, id: -1 })    
   }
   // to trigger roolling and maintain state
   roll = () => {

@@ -7,12 +7,7 @@ import './App.css';
 
 function App() {
     const [balance, setBalance] = useState(99.99);
-    const [rows, setRows] = useState([{ 
-      id: 0, 
-      slot1: 0, 
-      slot2: 0, 
-      slot3: 0, 
-      date: '' }])
+    const [rows, setRows] = useState([])
 
     useEffect(() => {
       const result = localStorage.getItem('balance');
