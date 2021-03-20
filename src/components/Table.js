@@ -9,7 +9,7 @@ const columns = [
   {
     field: 'date',
     headerName: 'Date',
-    width: 160,
+    width: 250,
   },
 ];
 

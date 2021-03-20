@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 const { createRef , Component } = React;
 
 class Slots extends Component {
@@ -45,7 +46,7 @@ class Slots extends Component {
             slot1: this.state.slot1, 
             slot2: this.state.slot2, 
             slot3: this.state.slot3, 
-            date: Date.now() }))
+            date: moment().format("ddd, MMM Do YYYY, h:mm:ss a") }))
       }, 200);
       
       setTimeout(() => {
